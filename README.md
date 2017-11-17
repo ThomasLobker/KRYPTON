@@ -16,6 +16,8 @@ Many providers offer telecom solutions for their users on either a postpaid basi
 #### The solution
 KRYPTON is offering a solution where users can have a prepaid wallet, where the funds are staying in full control of the user at any time. Users can switch providers at any time, or even use multiple providers at the same time, using the same prepaid balance. For example if you want to make domestic calls with a different provider than foreign calls.
 
+![Registration process](https://cryptomedia.nl/schema1.png)
+
 ## Scope
 
 #### Smart Contract
@@ -25,7 +27,7 @@ The Smart Contract will provide a trustless bridge between user and provider, us
 - User authorization
 - Registration of users on the network of a provider
 - Deploying providers with outbound proxy address
-- Reservation and withdrawals of NeoGas during phone calls (_not yet available in version 1_)
+- Reservation and withdrawals of NeoGas during phone calls (_not yet available in initial version_)
 
 [Read more](contract/README.md)
 
