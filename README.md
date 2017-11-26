@@ -78,6 +78,8 @@ invoke SCRIPTHASH function ["parameter","parameter","parameter"]
     - `type` Query the user `uuid` or `location`
     - `user` The public NEO address of the user
 
+_The scripthash on NEO testnet is: `65c07d970646fc7aebeae3bb4eb86bcdde957e1e`_
+
 ## License
 - KRYPTON is open-source under [MIT license](https://github.com/MediaServe/KRYPTON/LICENSE.md)
 - Maintained by [Thomas Lobker](https://www.linkedin.com/in/thomaslobker/)
