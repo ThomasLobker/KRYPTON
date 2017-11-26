@@ -1,0 +1,29 @@
+{
+  "name": "krypton-api",
+  "version": "0.1.0",
+  "description": "API for the KRYPTON.live smart contract to provide a web-interface for the NEO blockchain",
+  "author": "Thomas Lobker",
+  "main": "index.js",
+  "dependencies": {
+    "@cityofzion/neon-js": "^2.0.0",
+    "axios": "^0.17.1"
+  },
+  "keywords": [
+    "neo",
+    "neon-js",
+    "neon",
+    "neo-js",
+    "neo-js-api",
+    "neo",
+    "blockchain",
+    "smart",
+    "contract",
+    "neon",
+    "smart",
+    "contract",
+    "blockchain",
+    "krypton",
+    "mediaserve"
+  ],
+  "license": "MIT"
+}

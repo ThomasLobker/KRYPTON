@@ -1,0 +1,5 @@
+module.exports = {
+	scriptHash: '902c3c871ff596e69cf69fd4e289fa5b884f1aca',
+	RESTEndpoint: 'http://testnet-api.wallet.cityofzion.io',
+	wif: 'KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr'
+};
