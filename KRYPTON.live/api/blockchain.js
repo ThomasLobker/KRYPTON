@@ -53,11 +53,16 @@ module.exports = {
 		return util.reverseHex(hash)
 	},
 
+	getAddress: (input) => {
+		const hash = util.reverseHex(input)
+		return neon.wallet.getAddressFromScriptHash(hash)
+	},
+
 	isAddress: (address) => {
 		return neon.wallet.isAddress(address);
 	},
 
-	getStorage: (key) => {
+	getStorage: (key, type = "hex") => {
 		if (module.exports.isAddress(key)) {
 			key = module.exports.getScriptHash(key)
 		} else {
@@ -67,7 +72,11 @@ module.exports = {
 			'getstorage',
 			[config.scriptHash, key]
 		).then(function (res) {
-			return util.hex2str(res.result)
+			if (type == "scriptHash") {
+				return module.exports.getAddress(res.result)
+			} else {
+				return util.hex2str(res.result)
+			}
 		})
 	},
 
