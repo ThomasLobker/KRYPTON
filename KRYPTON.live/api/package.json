@@ -14,8 +14,7 @@
     "node-restify-validation": "^1.1.1",
     "restify": "^6.3.4",
     "restify-errors": "^5.0.0",
-    "restify-plugins": "^1.6.0",
-    "utf8": "^2.1.2"
+    "restify-plugins": "^1.6.0"
   },
   "keywords": [
     "neo",
