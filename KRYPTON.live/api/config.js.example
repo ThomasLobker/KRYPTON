@@ -1,5 +1,8 @@
 module.exports = {
-	scriptHash: '902c3c871ff596e69cf69fd4e289fa5b884f1aca',
+	scriptHash: '65c07d970646fc7aebeae3bb4eb86bcdde957e1e',
 	RESTEndpoint: 'http://testnet-api.wallet.cityofzion.io',
-	wif: 'KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr'
+	wif: 'KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr',
+	name: 'KRYPTON.live API Service',
+	version: '0.1.0',
+	port: 3000
 };
