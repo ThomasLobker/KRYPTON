@@ -37,4 +37,4 @@ https://krypton.live/api/query/TYPE/USER
     - `type` Query the user `uuid`, `location` or `provider` value
     - `user` The public NEO address of the user
 
-More functions will be added in a later stage.
+Example: https://krypton.live/api/query/location/AGs7dP8tX1KgjXopLELdmZed85GnEkFPRh
