@@ -4,9 +4,19 @@
   "description": "API for the KRYPTON.live smart contract to provide a web-interface for the NEO blockchain",
   "author": "Thomas Lobker",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MediaServe/KRYPTON.git"
+  },
   "dependencies": {
     "@cityofzion/neon-js": "^2.0.0",
-    "axios": "^0.17.1"
+    "axios": "^0.17.1",
+    "node-restify-validation": "^1.1.1",
+    "restify": "^6.3.4",
+    "restify-errors": "^5.0.0",
+    "restify-plugins": "^1.6.0",
+    "bytearray": "^0.1.3",
+    "utf8": "^2.1.2"
   },
   "keywords": [
     "neo",
