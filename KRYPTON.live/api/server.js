@@ -8,7 +8,6 @@ module.exports = function(server) {
 			address: { isRequired: true }
 		},
 	}}, (request, result, next) => {
-		const results = krypton.query(request.params.type, request.params.address);
-		result.send(request.params);
+		var data = krypton.query({ result, next }, request.params.type, request.params.address);
 	});
 }
