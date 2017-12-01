@@ -16,7 +16,7 @@ module.exports = {
 					console.log('uuid', uuid);
 					switch (type) {
 						case "uuid":
-							restify.result.send({ "status": "success", "type": type, "address": address, "value": uuid });
+							restify.result.send({ "status": "success", "type": type, "address": address, "code": 200, "value": uuid });
 							return true;
 						default:
 							node.getStorage(uuid, "scriptHash").then((result) => {
@@ -25,44 +25,50 @@ module.exports = {
 									console.log('provider', provider);
 									switch (type) {
 										case "provider":
-											restify.result.send({ "status": "success", "type": type, "address": address, "value": provider });
+											restify.result.send({ "status": "success", "type": type, "address": address, "code": 200, "value": provider });
 											return true;
 										case "location":
 											node.getStorage(provider).then((result) => {
 												if (typeof result === "string") {
 													const location = result;
 													console.log('location', location);
-													restify.result.send({ "status": "success", "type": type, "address": address, "value": location });
+													restify.result.send({ "status": "success", "type": type, "address": address, "code": 200, "value": location });
 													return true;
 												} else {
 													console.log('location not found');
+													restify.result.send({ "status": "failed", "type": type, "address": address, "code": 404, "message": "Not Found" });
 													return false;
 												}
 											}).catch(function(error) {
 												console.log(error);
+												restify.result.send({ "status": "failed", "type": type, "address": address, "code": 500, "message": "Internal Server Error" });
 												return false;
 											});
 									}
 								} else {
 									console.log('provider not found');
+									restify.result.send({ "status": "failed", "type": type, "address": address, "code": 404, "message": "Not Found" });
 									return false;
 								}
 							}).catch(function(error) {
 								console.log(error);
+								restify.result.send({ "status": "failed", "type": type, "address": address, "code": 500, "message": "Internal Server Error" });
 								return false;
 							});
 					}
 				} else {
 					console.log('uuid not found');
+					restify.result.send({ "status": "failed", "type": type, "address": address, "code": 404, "message": "Not Found" });
 					return false;
 				}
 			}).catch(function(error) {
 				console.log(error);
+				restify.result.send({ "status": "failed", "type": type, "address": address, "code": 500, "message": "Internal Server Error" });
 				return false;
 			});
 		} else {
 			console.log("invalid NEO address");
-			restify.result.send({ "status": "failed", "message": "Invalid NEO address" });
+			restify.result.send({ "status": "failed", "type": type, "address": address, "code": 503, "message": "Invalid Address" });
 			return false;
 		}
 	}
