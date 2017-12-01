@@ -72,10 +72,15 @@ module.exports = {
 			'getstorage',
 			[config.scriptHash, key]
 		).then(function (res) {
-			if (type == "scriptHash") {
-				return module.exports.getAddress(res.result)
+			if (res.result) {
+				if (type == "scriptHash") {
+					return module.exports.getAddress(res.result)
+				} else {
+					return util.hex2str(res.result)
+				}
 			} else {
-				return util.hex2str(res.result)
+				console.log('empty result',key)
+				return false
 			}
 		})
 	},
